@@ -17,7 +17,7 @@ def produce_mask(path):
 		dfsubstr=df[df['Object']==i]
 		
 		if dfsubstr['Type'].values[0]=='Polygon':
-			cc,rr=polygon(dfsubstr['X'].values - 1, dfsubstr['Y'].values)
+			cc,rr=polygon(dfsubstr['X'].values - 1, dfsubstr['Y'].values - 1)
 			img[rr,cc]=1
 		
 		elif dfsubstr['Type'].values[0]=='Line':
